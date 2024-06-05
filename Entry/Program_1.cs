@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Entry.Common;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -6,14 +7,14 @@ using System.Diagnostics;
 
 namespace Entry
 {
-    public class GameSprite : Game
+    public class Program : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
         public MapUserInput MapUserInput;
         public readonly Map Map;
-        public GameSprite()
+        public Program()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -27,6 +28,10 @@ namespace Entry
         protected override void Initialize()
         {
             base.Initialize();
+
+            Settings.Init();
+            Resources.Init();
+
             this.Map.Initialize();
         }
 

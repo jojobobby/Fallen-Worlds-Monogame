@@ -17,7 +17,6 @@ namespace Entry
         {
             this.Map = map;
         }
-
         public override void Update()
         {
             this.Inputs();

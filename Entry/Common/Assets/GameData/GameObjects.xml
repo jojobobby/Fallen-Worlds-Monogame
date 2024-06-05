@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+	<Object type="0x0000" id="Enemy">
+		<Class>GameObject</Class>
+		<Texture>
+			<File></File>
+			<Index></Index>
+		</Texture> 
+	</Object>
+</Objects>
