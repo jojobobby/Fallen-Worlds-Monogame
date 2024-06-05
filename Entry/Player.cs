@@ -24,6 +24,7 @@ namespace Entry
         }
         private void Inputs()
         {
+            //TODO: add rectangle collision instead of position collision
             var yVelocity = MapUserInput.moving_down ? SPEED : MapUserInput.moving_up ? -SPEED : 0;
             var xVelocity = MapUserInput.moving_right ? SPEED : MapUserInput.moving_left ? -SPEED : 0;
 
