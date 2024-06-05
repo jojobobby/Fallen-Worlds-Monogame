@@ -21,8 +21,8 @@ namespace Entry
                 return new Rectangle(
                     (int)Position_.X, 
                     (int)Position_.Y, 
-                    100, 
-                    100
+                    64,
+                    64
                     );
             }
         }

@@ -7,14 +7,14 @@ using System.Diagnostics;
 
 namespace Entry
 {
-    public class Program : Game
+    public class GameSprite : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
         public MapUserInput MapUserInput;
         public readonly Map Map;
-        public Program()
+        public GameSprite()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

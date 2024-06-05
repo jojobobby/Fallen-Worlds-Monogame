@@ -10,7 +10,7 @@ namespace Entry
 {
     public class GameObject : BasicObject
     {
-        public GameObject(Map map, Texture2D texture, Vector2 position) : base (map,texture, position)
+        public GameObject(Map map, Texture2D texture, Vector2 position) : base (map, texture, position)
         {
 
         }

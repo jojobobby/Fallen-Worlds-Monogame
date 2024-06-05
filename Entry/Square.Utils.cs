@@ -12,7 +12,7 @@ namespace Entry
 {
     public partial class Square
     {
-        public static int SIZE = 40;
+        public static int SIZE = 32;
         private const float X_CENTER_OFFSET = 0.5f;
         private const float Y_CENTER_OFFSET = 0.5f;
 

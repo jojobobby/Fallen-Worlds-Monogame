@@ -15,7 +15,6 @@ namespace Entry.Common
         public static Dictionary<string, ObjectDesc> IdLower2Object = new Dictionary<string, ObjectDesc>();
         public static Dictionary<int, ObjectDesc> Type2Object = new Dictionary<int, ObjectDesc>();
 
-
         public static void Init()
         {
             LoadGameData();
@@ -32,14 +31,13 @@ namespace Entry.Common
                 {
                     var id = element.ParseString("@id");
                     var type = element.ParseUshort("@type");
-#if DEBUG
+
                     if (string.IsNullOrWhiteSpace(id))
                         throw new Exception("Invalid ID.");
                     if (Type2Object.ContainsKey(type))
                         throw new Exception($"Duplicate type <{id}:{type}>");
                     if (IdLower2Object.ContainsKey(id))
                         throw new Exception($"Duplicate ID <{id}:{type}>");
-#endif
 
                     switch (element.ParseString("Class"))
                     { 

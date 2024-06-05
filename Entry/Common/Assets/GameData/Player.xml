@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+	<Object type="0x1000" id="Ship">
+		<Class>Player</Class>
+		<Texture>
+			<File></File>
+			<Index></Index>
+		</Texture> 
+	</Object>
+</Objects>

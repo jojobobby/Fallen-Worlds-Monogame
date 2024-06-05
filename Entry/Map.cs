@@ -16,10 +16,10 @@ namespace Entry
         public HashSet<StaticObject> StaticObjects;
         public HashSet<BasicObject> BasicObjects;
         public Player Player;
-        public Program GameSprite;
+        public GameSprite GameSprite;
         public Square[] Squares;
 
-        public Map(Program gameSprite)
+        public Map(GameSprite gameSprite)
         {
             this.GameSprite = gameSprite;
         }

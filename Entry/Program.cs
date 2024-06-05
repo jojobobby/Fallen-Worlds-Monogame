@@ -1,3 +1,3 @@
 ﻿
-using var game = new Entry.Program();
+using var game = new Entry.GameSprite();
 game.Run();
