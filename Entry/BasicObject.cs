@@ -14,7 +14,7 @@ namespace Entry
         public Texture2D Texture_;
         public Vector2 Position_;
         public Map Map_;
-        public Rectangle Rect_
+        public Rectangle Rectangle
         {
             get
             {
@@ -47,7 +47,7 @@ namespace Entry
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.Texture_, this.Position_, this.Color_);
+            spriteBatch.Draw(this.Texture_, this.Rectangle, this.Color_);
         }
     }
 }
