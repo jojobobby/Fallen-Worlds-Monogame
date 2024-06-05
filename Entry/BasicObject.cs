@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Entry.Common;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,9 @@ namespace Entry
 {
     public class BasicObject
     {
-        public Color Color_;
+        public Color Color_ = Color.White;
         public Texture2D Texture_;
+        public Rectangle TexturePosition;
         public Vector2 Position_;
         public Map Map_;
         public Rectangle Rectangle
@@ -27,12 +29,9 @@ namespace Entry
             }
         }
 
-        public BasicObject(Map map, Texture2D texture, Vector2 position)
+        public BasicObject()
         {
-            this.Texture_ = texture;
-            this.Position_ = position;
-            this.Color_ = Color.White;
-            this.Map_ = map;
+
         }
 
         public virtual void Initialize()
@@ -47,7 +46,7 @@ namespace Entry
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.Texture_, this.Rectangle, this.Color_);
+            spriteBatch.Draw(this.Texture_, this.Rectangle, this.TexturePosition, this.Color_);
         }
     }
 }

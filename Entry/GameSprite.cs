@@ -30,7 +30,7 @@ namespace Entry
             base.Initialize();
 
             Settings.Init();
-            Resources.Init();
+            Resources.Init(GraphicsDevice);
 
             this.Map.Initialize();
         }

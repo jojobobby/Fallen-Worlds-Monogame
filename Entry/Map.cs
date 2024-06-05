@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entry.Common;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -27,7 +28,7 @@ namespace Entry
         public void Initialize()
         {
             this.Squares = new Square[WIDTH * HEIGHT];
-            this.Player = new Player(this, GameSprite.Content.Load<Texture2D>("Ship"), new Vector2(100, 100));
+            this.Player = new Player(this, 0x1000);
             this.StaticObjects = [];
             this.BasicObjects = [];
 
@@ -43,7 +44,7 @@ namespace Entry
                     var square = new Square(this, x, y);
                     //just draw instead of initalize.
                     //Only done this way because we need texture and I havent set up a loadtexture class yet.
-                    square.Initialize();
+                    square.SetTileType(0x0000);
                     
 
                     this.Squares[x + y * WIDTH] = square;

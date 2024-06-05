@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Entry.Common;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace Entry
         private readonly float SPEED = 4;
 
         private Map Map;
-        public Player(Map map, Texture2D texture, Vector2 position) : base(map, texture, position)
+        public Player(Map map, ushort objectType) : base(map, objectType)
         {
             this.Map = map;
         }

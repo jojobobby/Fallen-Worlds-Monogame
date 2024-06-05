@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Entry.Common;
+using Entry.Common.Assets.Textures;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -15,7 +17,11 @@ namespace Entry
     {
         private Texture2D Texture;
 
+        private Rectangle TexturePosition;
+
         private Map Map;
+
+        private ushort ObjectType;
 
         public bool Visible = true;
 
@@ -30,9 +36,18 @@ namespace Entry
             this.Y = y * Square.SIZE;
         }
 
+        public void SetTileType(ushort objectType)
+        {
+            this.ObjectType = objectType;
+            this.Texture = Resources.Type2GroundTexture[ObjectType].Texture;
+            var index = TextureUtils.IndexToPosition(Resources.Type2GroundTexture[ObjectType].Index);
+
+            this.TexturePosition = new Rectangle(index, new Point(8, 8));
+        }
+
         public void Initialize()
         {
-            this.Texture = this.Map.GameSprite.Content.Load<Texture2D>("Square");
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -43,7 +58,7 @@ namespace Entry
                 return;
             }
 
-            spriteBatch.Draw(this.Texture, this.Rectangle, Color.White);
+            spriteBatch.Draw(Texture, this.Rectangle, this.TexturePosition, Color.White);
         }
     }
 }

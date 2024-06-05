@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Objects>
-	<Object type="0x1000" id="Ship">
-		<Class>Player</Class>
+	<Ground type="0x0000" id="Ground">
 		<Texture>
 			<File>ShipTiles</File>
 			<Index>0x01</Index>
 		</Texture>
-	</Object>
+	</Ground>
 </Objects>

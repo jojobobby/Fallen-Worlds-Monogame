@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Entry.Common;
+using Entry.Common.Assets.Textures;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -10,9 +12,16 @@ namespace Entry
 {
     public class GameObject : BasicObject
     {
-        public GameObject(Map map, Texture2D texture, Vector2 position) : base (map, texture, position)
+        private ushort ObjectType;
+        public GameObject(Map map, ushort objectType) : base ()
         {
+            this.Map_ = map;
+            this.ObjectType = objectType; this.ObjectType = objectType;
+            this.Texture_ = Resources.Type2Texture[ObjectType].Texture;
 
+            var index = TextureUtils.IndexToPosition(Resources.Type2Texture[ObjectType].Index);
+
+            this.TexturePosition = new Rectangle(index, new Point(8, 8));
         }
 
         public override void Update()

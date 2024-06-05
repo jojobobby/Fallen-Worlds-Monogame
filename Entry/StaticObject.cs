@@ -10,9 +10,11 @@ namespace Entry
 {
     public class StaticObject : BasicObject
     {
-        public StaticObject(Map map, Texture2D texture, Vector2 position) : base(map, texture, position)
+        public StaticObject(Map map, Texture2D texture, Vector2 position) : base()
         {
-
+            this.Map_ = map;
+            this.Texture_ = texture;
+            this.Position_ = position;
         }
     }
 }
